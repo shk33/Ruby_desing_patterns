@@ -22,6 +22,16 @@ class Hero
   def initialize_stats
   end
 
+  def greet
+    greeting = ["Hello"]
+    greeting << unique_greeting_line
+    greeting
+  end
+
+  def unique_greeting_line
+    raise "You must define unique_greeting_line"  
+  end
+
 end
 
 class Warrior < Hero
@@ -34,10 +44,14 @@ class Warrior < Hero
     [:strike]
   end
 
+  def unique_greeting_line
+    "Warrior is ready to fight"
+  end
+
 end
 
 class Mage < Hero
-  
+
   def rating_attack
     7
   end

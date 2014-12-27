@@ -3,6 +3,7 @@ require "spec_helper"
 require_relative '../lib/template_method'
 
 describe "Template method Pattern" do
+
   context "a default hero" do
     let(:hero) { Hero.new }
 
@@ -12,6 +13,10 @@ describe "Template method Pattern" do
 
     it "can attack" do
       expect(hero.attack).to eq("Attacked dealing 10 damage")  
+    end
+
+    it "require subclasses to implement unique_greeting_line" do
+      expect{hero.greet}.to raise_exception
     end
   end
 
@@ -24,6 +29,10 @@ describe "Template method Pattern" do
 
     it "has Strike special ability" do
       expect(hero.abilities).to include(:strike)  
+    end
+
+    it "Greet other characters" do
+      expect(hero.greet).to eq(["Hello","Warrior is ready to fight"])  
     end
   end
 
