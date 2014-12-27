@@ -2,30 +2,48 @@ class Hero
   attr_reader :damage, :abilities
 
   def initialize
-    @damage = 10
-    @abilities = []
+    initialize_stats
+    @damage    = rating_attack
+    @abilities = occupation_abilities
   end
 
   def attack
     "Attacked dealing #{@damage} damage"
   end
 
+  def rating_attack
+    10
+  end
+
+  def occupation_abilities
+    []
+  end
+
+  def initialize_stats
+  end
+
 end
 
 class Warrior < Hero
 
-  def initialize
-    @damage = 15
-    @abilities = [:strike]
+  def rating_attack
+    15
+  end
+
+  def occupation_abilities
+    [:strike]
   end
 
 end
 
 class Mage < Hero
+  
+  def rating_attack
+    7
+  end
 
-  def initialize
-    @damage = 7
-    @abilities = [:magic_arrow]
+  def occupation_abilities
+    [:magic_arrow]
   end
 
 end 
