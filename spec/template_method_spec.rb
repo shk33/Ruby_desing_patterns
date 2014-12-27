@@ -20,7 +20,23 @@ describe "Template method Pattern" do
 
     it "has default damage rating of 15" do
       expect(hero.damage).to eq(15)  
-    end    
+    end
+
+    it "has Strike special ability" do
+      expect(hero.abilities).to include(:strike)  
+    end
+  end
+
+  context "Mage" do
+    let(:hero) { Hero.new :mage }
+
+    it "has default damage rating of 7" do
+      expect(hero.damage).to eq(7)  
+    end
+
+    it "has Magic Arrow special ability" do
+      expect(hero.abilities).to include(:magic_arrow)  
+    end
   end
 
 end
