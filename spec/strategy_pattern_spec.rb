@@ -25,6 +25,12 @@ describe "Strategy Pattern" do
         expect(hero.print_stats).to eq("Stealth\nDriving\nIntimidation\n")  
       end
 
+      it "can use custom ad hoc printer" do
+        result = hero.print_stats do |damage, health, skills|
+          "Damage: #{damage}\nNumber of skills: #{skills.size}"
+        end
+      end
+
     end
 
     describe "skills" do
