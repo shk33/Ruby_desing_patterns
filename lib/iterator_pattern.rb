@@ -23,6 +23,10 @@ class Item
     @cost = 0
   end
 
+  def <=> other
+    self.cost <=> other.cost 
+  end
+
 end
 
 class InventoryIterator
