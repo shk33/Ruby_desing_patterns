@@ -10,3 +10,6 @@ Template Method Pattern
 
 Strategy Pattern
 "Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it"
+
+Observer Pattern
+"Define a one-to-many dependency betwee objects so that when one object changes state, all its dependencies are notified and updated automatically "
