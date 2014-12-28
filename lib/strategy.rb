@@ -10,23 +10,23 @@ class Hero2
   end
 
   def print_stats(stats = nil)
-    printer.print(self)
+    printer.print(damage, health, skills)
   end
   
 end
 
 class BattleStats
   
-  def print context
-    "Damage: #{context.damage}\nHealth: #{context.health}"
+  def print damage, health, skills
+    "Damage: #{damage}\nHealth: #{health}"
   end
   
 end
 
 class SkillStats
   
-  def print context
-    context.skills.inject("") {|result,skill| "#{result}#{skill.to_s.capitalize}\n"}
+  def print damage, health, skills
+    skills.inject("") {|result,skill| "#{result}#{skill.to_s.capitalize}\n"}
   end
   
 end
