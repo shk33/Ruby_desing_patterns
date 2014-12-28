@@ -19,17 +19,40 @@ class Hero2
   
 end
 
-class BattleStats
+class HTMLPrinter
   
   def print damage, health, skills
+    result  = header
+    result += content damage, health, skills
+    result += footer
+  end
+  
+  def header
+    "<html>"
+  end
+
+  def footer
+    "</html>"
+  end
+
+  def content
+    raise "You must implement content"
+  end
+  
+  
+end
+
+class BattleStats < HTMLPrinter
+  
+  def content damage, health, skills
     "Damage: #{damage}\nHealth: #{health}"
   end
   
 end
 
-class SkillStats
+class SkillStats < HTMLPrinter
   
-  def print damage, health, skills
+  def content damage, health, skills
     skills.inject("") {|result,skill| "#{result}#{skill.to_s.capitalize}\n"}
   end
   
