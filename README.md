@@ -1,4 +1,4 @@
-Ruby_desing_patterns
+Desing Patterns implement in Ruby
 ====================
 
 12 most common design patterns implemented in Ruby.
