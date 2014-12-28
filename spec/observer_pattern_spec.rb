@@ -1,5 +1,5 @@
 require "spec_helper"
-require_relative '../lib/observer'
+require_relative '../lib/observer_pattern'
 
 describe "Observer Pattern" do
 
