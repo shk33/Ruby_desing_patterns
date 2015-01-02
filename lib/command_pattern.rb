@@ -8,6 +8,12 @@ class Computer
   def add command
     @queue << command 
   end
+
+  def execute
+    @queue.inject("\n") do |result, command|
+      "#{result}#{command.execute}\n"
+    end
+  end
   
 end
 

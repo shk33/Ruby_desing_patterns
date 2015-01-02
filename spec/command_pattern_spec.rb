@@ -14,6 +14,13 @@ describe "Commando Pattern" do
     it "can add commands to its queue" do
       expect(computer.queue.size).to eq(2)        
     end
+
+    it "executes all commands in order" do
+      expect(computer.execute).to eq %Q{
+Calibrated
+Compiling
+} 
+    end
   end
   
   describe "Commands" do
