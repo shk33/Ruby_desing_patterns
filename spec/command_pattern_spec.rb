@@ -3,6 +3,22 @@ require_relative '../lib/command_pattern'
 
 describe "Commando Pattern" do
 
+  describe Reactor do
+    
+    it "is fixed if commands are executed in the right order" do
+      computer = Computer.new
+      computer.add AmplifyShieldCommand.new
+      computer.add CalibrateCommand.new
+      computer.add TestCompilerCommand.new
+      computer.add InstallCommand.new
+
+      reactor = Reactor.new
+      expect(reactor.functional?).to be false  
+
+    end
+
+  end
+
   describe Computer do
     let(:computer) { Computer.new } 
 
