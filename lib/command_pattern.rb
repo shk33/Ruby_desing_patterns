@@ -1,3 +1,16 @@
+class Computer
+  attr_reader :queue
+
+  def initialize
+    @queue = []
+  end
+
+  def add command
+    @queue << command 
+  end
+  
+end
+
 class AmplifyShieldCommand
   
   def execute

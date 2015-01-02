@@ -2,6 +2,19 @@ require "spec_helper"
 require_relative '../lib/command_pattern'
 
 describe "Commando Pattern" do
+
+  describe Computer do
+    let(:computer) { Computer.new } 
+
+    before :each do
+      computer.add(CalibrateCommand.new)
+      computer.add(TestCompilerCommand.new)
+    end
+
+    it "can add commands to its queue" do
+      expect(computer.queue.size).to eq(2)        
+    end
+  end
   
   describe "Commands" do
     
