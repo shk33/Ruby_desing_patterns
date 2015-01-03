@@ -22,3 +22,6 @@ Command Pattern
 
 Factory Method Pattern
 "Define an interface for creating an object, but let subclasses decide wich class to instantiate. Factory method lets a class defer instantiation to subclasses"
+
+Abstract Factory Pattern
+"Provide an interface for creating families of related or dependent objects without specifiyin their concrete classes"
