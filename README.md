@@ -19,3 +19,6 @@ Iterator Pattern
 
 Command Pattern
 "Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations"
+
+Factory Method Pattern
+"Define an interface for creating an object, but let subclasses decide wich class to instantiate. Factory method lets a class defer instantiation to subclasses"
