@@ -1,11 +1,33 @@
 class Party
   attr_reader :members
 
-  def initialize number, occupation
+  def initialize factory
     @members = []
+    @factory = factory
+  end
+
+  def add_warriors number
     number.times do
-      members << create(occupation)
+      @members << @factory.create_warrior
     end
+  end
+
+  def add_mages number
+    number.times do
+      @members << @factory.create_mage 
+    end
+  end
+
+end
+
+class HeroFactory
+
+  def create_warrior
+    Warrior2.new
+  end
+
+  def create_mage
+    Mage2.new
   end
 
 end
