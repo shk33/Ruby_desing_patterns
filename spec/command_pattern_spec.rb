@@ -25,10 +25,13 @@ describe "Commando Pattern" do
       expect(hero.wood).to eq 0
 
       turn.redo_move
-      turn.redo_move
+      expect(hero.wood).to eq 10
 
-      expect(hero.wood).to   eq 10
+      turn.redo_move
       expect(hero.health).to eq 5
+
+      turn.undo_move
+      expect(hero.health).to eq 0
     end
 
   end

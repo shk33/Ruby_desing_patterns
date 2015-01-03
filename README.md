@@ -16,3 +16,6 @@ Observer Pattern
 
 Iterator Pattern
 "In object-oriented programming, the iterator pattern is a design pattern in which an iterator is used to traverse a container and access the container's elements. The iterator pattern decouples algorithms from containers; in some cases, algorithms are necessarily container-specific and thus cannot be decoupled."
+
+Command Pattern
+"Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations"
