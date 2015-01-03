@@ -20,6 +20,15 @@ describe "Commando Pattern" do
       
       turn.undo_move
       expect(hero.health).to eq 0
+
+      turn.undo_move
+      expect(hero.wood).to eq 0
+
+      turn.redo_move
+      turn.redo_move
+
+      expect(hero.wood).to   eq 10
+      expect(hero.health).to eq 5
     end
 
   end

@@ -2,6 +2,7 @@ class Turn
 
   def initialize
     @moves = []
+    @undone_moves = []
   end
 
   def make_move move
@@ -10,7 +11,14 @@ class Turn
   end
 
   def undo_move
-    @moves.pop.unexecute
+    move = @moves.pop
+    move.unexecute
+    @undone_moves << move
+  end
+
+  def redo_move
+    move = @undone_moves.pop
+    self.make_move move
   end
   
 end
