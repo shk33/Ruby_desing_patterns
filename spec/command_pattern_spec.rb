@@ -46,7 +46,11 @@ describe "Commando Pattern" do
       computer.add InstallCommand.new
 
       reactor = Reactor.new
-      expect(reactor.functional?).to be false  
+      expect(reactor.functional?).to be false
+
+      reactor.fix computer.execute
+      expect(reactor.functional?).to be true
+
 
     end
 
